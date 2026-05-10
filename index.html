@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nathan Pichon — Coach Fitness</title>
+  <meta name="description" content="Coaching fitness individualisé à distance. Recomposition corporelle, musculation naturelle, méthode pédagogique et ancestrale.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <nav>
+    <a href="#" class="nav-logo">Nathan Pichon</a>
+    <a href="#quiz-section" class="nav-cta">Trouve ta formule</a>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section class="hero">
+    <div class="hero-left">
+      <div class="hero-eyebrow">
+        <div class="eyebrow-line"></div>
+        <span class="eyebrow-text">Coach fitness &amp; nutrition</span>
+      </div>
+
+      <h1>Construis<br>ton corps.<br><em>Pas une image.</em></h1>
+
+      <p class="hero-sub">
+        L'entraînement comme processus de construction de soi.
+        <strong>Physique grec. Naturel. Long terme.</strong><br>
+        Aucun programme générique. Aucune tendance. Que de l'efficacité.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#quiz-section" class="btn-primary">Trouve ta formule</a>
+        <a href="#offres" class="btn-ghost">Voir les offres</a>
+      </div>
+
+      <div class="hero-stats">
+        <div>
+          <div class="stat-num">34K</div>
+          <div class="stat-label">Vues / 28 jours</div>
+        </div>
+        <div>
+          <div class="stat-num">+100</div>
+          <div class="stat-label">Clients accompagnés</div>
+        </div>
+        <div>
+          <div class="stat-num">6 ans</div>
+          <div class="stat-label">De pratique</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <!-- Remplacer src par le chemin vers ta photo P1001505.JPG -->
+      <img src="assets/hero.jpg" alt="Nathan Pichon en salle de musculation">
+    </div>
+  </section>
+
+  <!-- ── QUIZ FUNNEL ── -->
+  <section class="section" id="quiz-section">
+    <div class="quiz-wrapper">
+
+      <div class="section-label" style="justify-content:center; margin-bottom:8px;">
+        <div class="label-line"></div>
+        <span class="label-text">Quiz</span>
+        <div class="label-line"></div>
+      </div>
+      <h2 style="text-align:center; margin-bottom:8px;">Trouve ta formule</h2>
+      <p class="section-intro" style="text-align:center; margin:0 auto 48px;">
+        4 questions. Je te recommande la formule qui correspond exactement à ta situation.
+      </p>
+
+      <!-- Progression -->
+      <div class="quiz-progress" id="quiz-progress">
+        <div class="quiz-dot active" id="dot-1"></div>
+        <div class="quiz-dot" id="dot-2"></div>
+        <div class="quiz-dot" id="dot-3"></div>
+        <div class="quiz-dot" id="dot-4"></div>
+      </div>
+
+      <!-- Question 1 -->
+      <div class="quiz-step active" id="step-1">
+        <p class="quiz-question">Depuis combien de temps tu t'entraînes ?</p>
+        <p class="quiz-sub">Sois honnête — c'est pour mieux t'orienter.</p>
+        <div class="quiz-options">
+          <button class="quiz-option" onclick="answer(1, 'debutant')">
+            <span class="quiz-option-icon">🌱</span>
+            <div class="quiz-option-text">
+              <strong>Moins d'un an</strong>
+              <span>Je débute ou je reprends</span>
+            </div>
+          </button>
+          <button class="quiz-option" onclick="answer(1, 'intermediaire')">
+            <span class="quiz-option-icon">💪</span>
+            <div class="quiz-option-text">
+              <strong>1 à 3 ans</strong>
+              <span>J'ai des bases solides</span>
+            </div>
+          </button>
+          <button class="quiz-option" onclick="answer(1, 'avance')">
+            <span class="quiz-option-icon">🏛</span>
+            <div class="quiz-option-text">
+              <strong>Plus de 3 ans</strong>
+              <span>Je cherche à progresser davantage</span>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <!-- Question 2 -->
+      <div class="quiz-step" id="step-2">
+        <p class="quiz-question">Ton objectif principal ?</p>
+        <p class="quiz-sub">Ce qui te motive à te lever le matin.</p>
+        <div class="quiz-options">
+          <button class="quiz-option" onclick="answer(2, 'muscle')">
+            <span class="quiz-option-icon">📈</span>
+            <div class="quiz-option-text">
+              <strong>Prendre du muscle</strong>
+              <span>Construire un physique dense et solide</span>
+            </div>
+          </button>
+          <button class="quiz-option" onclick="answer(2, 'gras')">
+            <span class="quiz-option-icon">🔥</span>
+            <div class="quiz-option-text">
+              <strong>Perdre du gras</strong>
+              <span>Retrouver un physique sec et défini</span>
+            </div>
+          </button>
+          <button class="quiz-option" onclick="answer(2, 'recompo')">
+            <span class="quiz-option-icon">⚖️</span>
+            <div class="quiz-option-text">
+              <strong>Recomposition corporelle</strong>
+              <span>Perdre du gras ET prendre du muscle en même temps</span>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <!-- Question 3 -->
+      <div class="quiz-step" id="step-3">
+        <p class="quiz-question">Comment tu veux avancer ?</p>
+        <p class="quiz-sub">Sois sincère — les deux options mènent à des résultats.</p>
+        <div class="quiz-options">
+          <button class="quiz-option" onclick="answer(3, 'auto')">
+            <span class="quiz-option-icon">🗺</span>
+            <div class="quiz-option-text">
+              <strong>Seul, avec un plan béton</strong>
+              <span>Je veux un programme personnalisé et me débrouiller</span>
+            </div>
+          </button>
+          <button class="quiz-option" onclick="answer(3, 'coaching')">
+            <span class="quiz-option-icon">🤝</span>
+            <div class="quiz-option-text">
+              <strong>Accompagné et suivi</strong>
+              <span>Je veux un coach qui suit mes progrès en temps réel</span>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <!-- Question 4 (seulement si coaching) -->
+      <div class="quiz-step" id="step-4">
+        <p class="quiz-question">Quel niveau de suivi tu cherches ?</p>
+        <p class="quiz-sub">Chaque palier est 100% personnalisé — la différence c'est la fréquence du suivi.</p>
+        <div class="quiz-options">
+          <button class="quiz-option" onclick="answer(4, 'essentiel')">
+            <span class="quiz-option-icon">🌙</span>
+            <div class="quiz-option-text">
+              <strong>Essentiel — 98 €/mois</strong>
+              <span>Programme + suivi mensuel + WhatsApp</span>
+            </div>
+          </button>
+          <button class="quiz-option" onclick="answer(4, 'equilibre')">
+            <span class="quiz-option-icon">⚡</span>
+            <div class="quiz-option-text">
+              <strong>Équilibre — 150 €/mois</strong>
+              <span>Tout l'Essentiel + suivi hebdomadaire + corrections techniques</span>
+            </div>
+          </button>
+          <button class="quiz-option" onclick="answer(4, 'harmonie')">
+            <span class="quiz-option-icon">👑</span>
+            <div class="quiz-option-text">
+              <strong>Harmonie — 300 €/mois</strong>
+              <span>Suivi journalier complet + appel mensuel</span>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <!-- Résultat -->
+      <div class="quiz-result" id="quiz-result">
+        <div class="result-badge" id="result-badge">Recommandation</div>
+        <p class="quiz-question" id="result-title"></p>
+        <p class="result-desc" id="result-desc"></p>
+        <div class="result-price" id="result-price"></div>
+        <div class="result-price-sub" id="result-price-sub"></div>
+        <ul class="result-features" id="result-features"></ul>
+        <a href="#" class="btn-primary" id="result-cta">Commencer maintenant</a>
+        <br>
+        <button class="quiz-restart" onclick="restartQuiz()">↩ Recommencer le quiz</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── LES OFFRES ── -->
+  <section class="section alt" id="offres">
+    <div class="section-inner">
+      <div class="section-label">
+        <div class="label-line"></div>
+        <span class="label-text">Les formules</span>
+      </div>
+      <h2>Deux chemins.<br>Un seul objectif.</h2>
+      <p class="section-intro">
+        Que tu veuilles avancer seul avec un plan solide ou être accompagné au quotidien — chaque formule est 100% personnalisée. Aucun forfait générique.
+      </p>
+
+      <div class="offres-grid">
+
+        <!-- Bloc 1 — Programme auto -->
+        <div class="offre-bloc">
+          <div class="offre-bloc-label">Programme</div>
+          <h3>Personnalisé</h3>
+          <p class="offre-bloc-desc">
+            Un programme d'entraînement et une structure alimentaire créés spécifiquement pour toi, sur 3 mois. Tu avances à ton rythme, en autonomie complète.
+          </p>
+          <ul class="result-features" style="margin-bottom: 32px;">
+            <li>Programme 3 mois 100% personnalisé</li>
+            <li>Structure alimentaire individualisée</li>
+            <li>Progression automatique mois par mois</li>
+            <li>Accès à vie au programme</li>
+            <li>Support vidéo via la chaîne YouTube</li>
+          </ul>
+          <div style="margin-bottom:8px;">
+            <span style="font-family:'Bebas Neue',sans-serif; font-size:48px; color:var(--gold);">149€</span>
+            <span style="font-size:13px; color:var(--text-muted); margin-left:4px;">paiement unique</span>
+          </div>
+          <!-- Remplacer href par le lien Stripe quand configuré -->
+          <a href="#" class="btn-primary" style="display:block; text-align:center;">Je veux mon programme</a>
+        </div>
+
+        <!-- Bloc 2 — Coaching Harmonie -->
+        <div class="offre-bloc">
+          <div class="offre-bloc-label">Coaching</div>
+          <h3>Harmonie</h3>
+          <p class="offre-bloc-desc">
+            Un suivi individuel continu. Programme, nutrition, récupération — tout est ajusté en permanence selon tes résultats réels. Tu n'es jamais seul.
+          </p>
+          <div class="paliers">
+            <div class="palier">
+              <div>
+                <div class="palier-name">Essentiel</div>
+              </div>
+              <div class="palier-price">98€ <span>/ mois</span></div>
+            </div>
+            <div class="palier featured">
+              <div>
+                <div class="palier-name">Équilibre <span class="palier-badge">Populaire</span></div>
+              </div>
+              <div class="palier-price">150€ <span>/ mois</span></div>
+            </div>
+            <div class="palier">
+              <div>
+                <div class="palier-name">Harmonie</div>
+              </div>
+              <div class="palier-price">300€ <span>/ mois</span></div>
+            </div>
+          </div>
+          <!-- Remplacer href par le lien Calendly/Stripe quand configuré -->
+          <a href="#" class="btn-primary" style="display:block; text-align:center;">Démarrer le coaching</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── POURQUOI NATHAN ── -->
+  <section class="section" id="pourquoi">
+    <div class="section-inner">
+      <div class="section-label">
+        <div class="label-line"></div>
+        <span class="label-text">Philosophie</span>
+      </div>
+      <h2>Pas de tendances.<br><em>Que de l'efficacité.</em></h2>
+      <p class="section-intro">
+        Mon approche est pédagogique et ancestrale. Je t'explique le pourquoi de chaque choix. Tu comprends ce que tu fais — et tu deviens autonome.
+      </p>
+
+      <div class="credibilite-grid">
+        <div class="credibilite-item">
+          <div class="credibilite-item-title">Approche pédagogique</div>
+          <p class="credibilite-item-text">Je t'explique le pourquoi de chaque décision — programme, nutrition, récupération. Tu comprends ce que tu fais et tu construis une vraie autonomie.</p>
+        </div>
+        <div class="credibilite-item">
+          <div class="credibilite-item-title">Méthode ancestrale</div>
+          <p class="credibilite-item-text">Inspirée des principes d'entraînement des anciens, adaptée à la physiologie moderne. Pas de tendances, pas de hacks — que ce qui fonctionne depuis des siècles.</p>
+        </div>
+        <div class="credibilite-item">
+          <div class="credibilite-item-title">100% individualisé</div>
+          <p class="credibilite-item-text">Chaque programme est créé pour toi : tes objectifs, ton niveau, ton emploi du temps, ta récupération. Aucun copier-coller, aucun forfait générique.</p>
+        </div>
+        <div class="credibilite-item">
+          <div class="credibilite-item-title">Long terme</div>
+          <p class="credibilite-item-text">L'objectif n'est pas une transformation en 30 jours. C'est de construire un physique solide, naturel et durable — qui reste à toi pour toujours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TÉMOIGNAGES ── -->
+  <section class="section alt" id="temoignages">
+    <div class="section-inner">
+      <div class="section-label">
+        <div class="label-line"></div>
+        <span class="label-text">Résultats</span>
+      </div>
+      <h2>Ce qu'ils en disent.</h2>
+      <p class="section-intro">
+        Des vrais clients. Des vrais résultats. <!-- À remplacer par de vrais témoignages -->
+      </p>
+
+      <div class="temoignages-grid">
+        <div class="temoignage">
+          <p class="temoignage-text">"À remplacer par un vrai témoignage client."</p>
+          <div class="temoignage-author">Prénom N.</div>
+          <div class="temoignage-detail">Formule Équilibre · 4 mois</div>
+        </div>
+        <div class="temoignage">
+          <p class="temoignage-text">"À remplacer par un vrai témoignage client."</p>
+          <div class="temoignage-author">Prénom N.</div>
+          <div class="temoignage-detail">Programme personnalisé · 3 mois</div>
+        </div>
+        <div class="temoignage">
+          <p class="temoignage-text">"À remplacer par un vrai témoignage client."</p>
+          <div class="temoignage-author">Prénom N.</div>
+          <div class="temoignage-detail">Formule Harmonie · 6 mois</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA FINAL ── -->
+  <section class="cta-section">
+    <div class="section-label" style="justify-content:center; margin-bottom:16px;">
+      <div class="label-line"></div>
+      <span class="label-text">Prêt ?</span>
+      <div class="label-line"></div>
+    </div>
+    <h2>Le premier kilo<br><em>t'appartient.</em></h2>
+    <p>Tu peux pas changer la société. Mais tu peux décider ce soir qu'à partir de demain tu vas pousser ton premier kilo. Et personne ne te le retirera.</p>
+    <a href="#quiz-section" class="btn-primary">Trouve ta formule</a>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="footer-logo">Nathan Pichon</div>
+    <div class="footer-links">
+      <!-- Remplacer les href par les vrais liens -->
+      <a href="#" target="_blank">YouTube</a>
+      <a href="#" target="_blank">Instagram</a>
+      <a href="mailto:contact@nathanpichon.com">Contact</a>
+    </div>
+    <div class="footer-copy">© 2026 Nathan Pichon · Coaching Harmonie</div>
+  </footer>
+
+  <script src="quiz.js"></script>
+</body>
+</html>
